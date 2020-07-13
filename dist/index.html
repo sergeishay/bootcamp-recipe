@@ -4,29 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBA Ruster</title>
+    <title>Recipes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="cont">
-        <input type="text" name="" id="inp" placeholder="Team">
-        <button onclick=getTeam() class="btn">Get Roster</button>
+        <input type="text" name="" id="inp" placeholder="ingredients">
+        <button onclick=getRecipes() class="btn">Find me recipes!</button>
     </div>
 
-    <script id="playersTemplate" type="text/x-handlebars-template">
+    <script id="recipesTemplate" type="text/x-handlebars-template">
     <div class="container">
-        {{#each team1}}
-         <div id="player-card">
-            <div class="players">
-                  <div class="fullName"> {{firstName}} {{lastName}}</div>
-                  <div class="jersey"> {{jersey}}</div>
-                  <div class="profImg"><img src="{{this.pic}}" onerror="this.onerror=null;this.src='https://nba-players.herokuapp.com/players/Olynyk/Kelly';"></div>
-                  <div class="pos" onerror="3">{{pos}}</div>
+        {{#each recipes}}
+         <div id="recipes-card">
+            <div class="recipes">
+                  <a href="{{href}}">{{title}}</a>
+                  <div class="dishImg"><img src="{{thumbnail}}"></div>
+                  <div class="ingredients">
+                      <ul>
+                      {{#each ingredients}}
+                            <li>{{this}}</li>
+                      {{/each}}
+                      </ul>
+                  </div>
             </div>
         </div>
-            {{/each}}
+        {{/each}}
     </div>
     </script>
 
@@ -36,3 +42,7 @@
 </body>
 
 </html>
+
+
+
+<!-- onerror="this.onerror=null;this.src='https://nba-players.herokuapp.com/players/Olynyk/Kelly';" -->

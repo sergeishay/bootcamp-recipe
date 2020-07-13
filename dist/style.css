@@ -1,0 +1,93 @@
+body{
+    background-color: #D1CCC0;
+    font-family: 'Merienda One', cursive;
+    font-size: 0.9em;
+}
+.cont{
+    width: 100vw;
+    display: inline-block;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#recipes-card{
+    margin: 30px;
+    border-top-right-radius: 75px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffda79;
+    margin:5px ;
+    border: #864812 solid 1px;
+    box-shadow: 2px 2px;
+    justify-items: center;
+    align-items: center;
+    max-width: 30vw;
+    max-height:45vh ;
+}
+.recipes{
+    width: 30vw;
+    height: 45vh;
+    margin:0.3em ;
+
+}
+.dishImg{
+    display: flex;
+    margin: 0.2em;
+    justify-content: center;
+    align-items: center
+}
+img{
+    width: 100%;
+    height: 100%;
+    max-width:10vw;
+    max-height: 15vh;
+    border-radius: 25px;
+    box-shadow: 0.1em 0.1em;
+}
+.ingredients{
+    /* display: flex; */
+    display: block;
+    font-size:0.6em;
+    width: 100%;
+}
+ul{
+    display: block;
+    
+}
+/* li{
+    display: flex;
+} */
+
+#inp{
+    width: 40%;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 6px;
+    border-color: #645c54;
+}
+
+.btn{
+    width: 15%;
+     display: inline-flex;
+     padding: 8px;
+     text-align: center;
+     justify-content: center;
+     border-color: #645c54;
+     border-radius: 6px;
+     
+    }
+
+    #recipes-card:hover{
+        display: absolute;
+        max-width: 35vw;
+        max-height:50vh ;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }

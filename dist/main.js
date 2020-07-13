@@ -1,15 +1,14 @@
-// const getTeam = function () {
-//     let input = $("input").val()
-//     $.get(`/teams/${input}`, function (team1) {
-//         console.log(team1)
-//         let source = $('#playersTemplate').html();
-//         let template = Handlebars.compile(source);
-//         $('.container').empty();
-//         let newHTML = template({ team1 });
-//         $('body').append(newHTML);
+// const Rendrerer = require(`./Rendrerer`);
 
-//     })
-// }
-// $(".container").on("click" ,".player-card" ,function(){
 
-// })
+const getRecipes = function () {
+    let input = $("input").val()
+    $.get(`/recipes/${input}`, function (recipes) {
+        console.log(recipes)
+        let source = $('#recipesTemplate').html();
+        let template = Handlebars.compile(source);
+        $('.container').empty();
+        let newHTML = template({ recipes });
+        $('body').append(newHTML);
+    })
+}
