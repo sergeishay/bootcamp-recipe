@@ -18,7 +18,7 @@
 
     <script id="recipesTemplate" type="text/x-handlebars-template">
     <div class="container">
-        {{#each recipes}}
+        {{#each data}}
          <div id="recipes-card">
             <div class="recipes">
                   <a href="{{href}}">{{title}}</a>
@@ -36,7 +36,9 @@
     </div>
     </script>
 
+    
     <script src="/jquery/dist/jquery.js"></script>
+    <script src="Renderer.js"></script>
     <script src="/handlebars/dist/handlebars.js"></script>
     <script src='main.js'></script>
 </body>
